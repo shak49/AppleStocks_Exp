@@ -34,8 +34,10 @@ struct ContentView: View {
                     .offset(y: -300)
                 SearchView(searchTerm: self.$model.searchTerm)
                     .offset(y: -250)
-                StockListView(stocks: self.model.stocks)
-                    .offset(y: 150)
+                StockListView(stocks: filteredStocks)
+                    .offset(y: 100)
+                ArticlesView(articles: self.model.articles)
+                    .offset(y: 500)
             }
             .navigationBarTitle("Stocks")
         }
