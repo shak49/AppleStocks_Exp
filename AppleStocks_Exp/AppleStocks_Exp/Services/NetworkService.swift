@@ -11,7 +11,7 @@ import UIKit
 class NetworkService {
     static let shared = NetworkService()
     
-    func getStocks(completion: @escaping([Stock]?) -> Void) {
+    func getStocks(completion: @escaping(([Stock]?) -> Void)) {
         guard let url = URL(string: "https://silicon-rhinoceros.glitch.me/stocks") else {
             fatalError("")
             return

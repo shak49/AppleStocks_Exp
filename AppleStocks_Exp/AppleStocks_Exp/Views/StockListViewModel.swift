@@ -26,8 +26,8 @@ struct StockViewModel {
 }
 
 class StockListViewModel: ObservableObject {
+    @Published var searchTerm: String = ""
     @Published var stocks: [StockViewModel] = []
-    var searchTerm: String = ""
     
     func loadData() {
         fetchStocks()
